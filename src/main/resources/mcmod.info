@@ -1,0 +1,21 @@
+[
+    {
+        "modid": "thaumicenergistics",
+        "name": "Thaumic Energistics",
+        "description": "The digital age could use some magic",
+        "version": "${version}",
+        "mcversion": "${mcversion}",
+        "url": "https://legacy.curseforge.com/minecraft/mc-mods/thaumic-energistics-extended-life-fork/settings/source",
+        "updateUrl": "",
+        "authorList":[
+            "ElectrifaedDed"
+        ],
+        "credits": "I",
+        "logoFile": "assets/thaumicenergistics/meta/logo.png",
+        "screenshots": [],
+        "dependencies": [
+            "appliedenergistics2",
+            "thaumcraft"
+        ]
+    }
+]
