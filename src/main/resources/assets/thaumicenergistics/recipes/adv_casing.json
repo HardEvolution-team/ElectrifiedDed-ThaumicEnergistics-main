@@ -1,0 +1,25 @@
+{
+    "result": {
+        "item": "thaumicenergistics:adv_casing"
+    },
+    "type": "forge:ore_shaped",
+    "pattern": [
+        "aba",
+        "bcb",
+        "ddd"
+    ],
+    "key": {
+        "a": {
+            "item": "appliedenergistics2:quartz_glass"
+        },
+        "d": {
+            "item": "thaumicenergistics:primal_ingot"
+        },
+        "b": {
+            "item": "appliedenergistics2:material:45"
+        },
+        "c": {
+            "item": "appliedenergistics2:material:39"
+        }
+    }
+}

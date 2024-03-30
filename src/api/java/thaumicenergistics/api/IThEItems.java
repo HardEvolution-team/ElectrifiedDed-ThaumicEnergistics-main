@@ -96,13 +96,13 @@ public interface IThEItems {
 
     IItemDefinition essentiaComponent4096k();
 
-    IItemDefinition essentiaComponent16384k();
+    IItemDefinition essentiaComponent16kk();
 
-    IItemDefinition essentiaComponent65536k();
+    IItemDefinition essentiaComponent65kk();
 
-    IItemDefinition essentiaComponent262144k();
+    IItemDefinition essentiaComponent262kk();
 
-    IItemDefinition essentiaComponent1048576k();
+    IItemDefinition essentiaComponent1048kk();
 
 
 

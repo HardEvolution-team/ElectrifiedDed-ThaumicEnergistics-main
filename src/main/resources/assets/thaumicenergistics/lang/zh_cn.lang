@@ -16,10 +16,10 @@ item.thaumicenergistics.essentia_component_64k.name=64k-ME源质储存组件
 item.thaumicenergistics.essentia_component_256k.name=256k-ME源质储存组件
 item.thaumicenergistics.essentia_component_1024k.name=1024k-ME源质储存组件
 item.thaumicenergistics.essentia_component_4096k.name=4096k ME源质储存组件
-item.thaumicenergistics.essentia_component_16384k.name=16384k ME源质储存组件
-item.thaumicenergistics.essentia_component_65536k.name=65536k ME源质储存组件
-item.thaumicenergistics.essentia_component_262144k.name=262144k ME源质储存组件
-item.thaumicenergistics.essentia_component_1048576k.name=1048576k ME源质储存组件
+item.thaumicenergistics.essentia_component_16kk.name=16384k ME源质储存组件
+item.thaumicenergistics.essentia_component_65kk.name=65536k ME源质储存组件
+item.thaumicenergistics.essentia_component_262kk.name=262144k ME源质储存组件
+item.thaumicenergistics.essentia_component_1048kk.name=1048576k ME源质储存组件
 
 
 

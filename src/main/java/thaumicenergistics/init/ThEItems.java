@@ -85,10 +85,10 @@ public class ThEItems implements IThEItems {
     private final IItemDefinition itemEssentiaComponent256k;
     private final IItemDefinition itemEssentiaComponent1024k;
     private final IItemDefinition itemEssentiaComponent4096k;
-    private final IItemDefinition itemEssentiaComponent16384k;
-    private final IItemDefinition itemEssentiaComponent65536k;
-    private final IItemDefinition itemEssentiaComponent262144k;
-    private final IItemDefinition itemEssentiaComponent1048576k;
+    private final IItemDefinition itemEssentiaComponent16kk;
+    private final IItemDefinition itemEssentiaComponent65kk;
+    private final IItemDefinition itemEssentiaComponent262kk;
+    private final IItemDefinition itemEssentiaComponent1048kk;
 
 
 
@@ -145,10 +145,10 @@ public class ThEItems implements IThEItems {
         this.itemEssentiaComponent256k = ThEItems.createItem(new ItemMaterial("essentia_component_256k"));
         this.itemEssentiaComponent1024k = ThEItems.createItem(new ItemMaterial("essentia_component_1024k"));
         this.itemEssentiaComponent4096k = ThEItems.createItem(new ItemMaterial("essentia_component_4096k"));
-        this.itemEssentiaComponent16384k = ThEItems.createItem(new ItemMaterial("essentia_component_16384k"));
-        this.itemEssentiaComponent65536k = ThEItems.createItem(new ItemMaterial("essentia_component_65536k"));
-        this.itemEssentiaComponent262144k = ThEItems.createItem(new ItemMaterial("essentia_component_262144k"));
-        this.itemEssentiaComponent1048576k = ThEItems.createItem(new ItemMaterial("essentia_component_1048576k"));
+        this.itemEssentiaComponent16kk = ThEItems.createItem(new ItemMaterial("essentia_component_16kk"));
+        this.itemEssentiaComponent65kk = ThEItems.createItem(new ItemMaterial("essentia_component_65kk"));
+        this.itemEssentiaComponent262kk = ThEItems.createItem(new ItemMaterial("essentia_component_262kk"));
+        this.itemEssentiaComponent1048kk = ThEItems.createItem(new ItemMaterial("essentia_component_1048kk"));
 
 
 
@@ -321,20 +321,20 @@ public class ThEItems implements IThEItems {
         return this.itemEssentiaComponent4096k;
     }
     @Override
-    public IItemDefinition essentiaComponent16384k() {
-        return this.itemEssentiaComponent16384k;
+    public IItemDefinition essentiaComponent16kk() {
+        return this.itemEssentiaComponent16kk;
     }
     @Override
-    public IItemDefinition essentiaComponent65536k() {
-        return this.itemEssentiaComponent65536k;
+    public IItemDefinition essentiaComponent65kk() {
+        return this.itemEssentiaComponent65kk;
     }
     @Override
-    public IItemDefinition essentiaComponent262144k() {
-        return this.itemEssentiaComponent262144k;
+    public IItemDefinition essentiaComponent262kk() {
+        return this.itemEssentiaComponent262kk;
     }
     @Override
-    public IItemDefinition essentiaComponent1048576k() {
-        return this.itemEssentiaComponent1048576k;
+    public IItemDefinition essentiaComponent1048kk() {
+        return this.itemEssentiaComponent1048kk;
     }
 
 

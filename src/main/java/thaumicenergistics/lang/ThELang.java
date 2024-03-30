@@ -11,6 +11,7 @@ public class ThELang implements IThELang {
     private IThELangKey creativeTab;
     private IThELangKey tileInfusionProvider;
     private IThELangKey tileArcaneAssembler;
+    private IThELangKey tileArcaneAssemblerAdv;
     private IThELangKey itemDiffusionCore;
     private IThELangKey itemCoalescenceCore;
     private IThELangKey itemEssentia1kComponent;
@@ -40,6 +41,14 @@ public class ThELang implements IThELang {
     private IThELangKey arcaneAssemblerProgress;
     private IThELangKey arcaneAssemblerNoAspect;
     private IThELangKey arcaneAssemblerNoVis;
+
+    private IThELangKey arcaneAssemblerAdvIdle;
+    private IThELangKey arcaneAssemblerAdvPrep;
+    private IThELangKey arcaneAssemblerAdvBusy;
+    private IThELangKey arcaneAssemblerAdvProgress;
+    private IThELangKey arcaneAssemblerAdvNoAspect;
+    private IThELangKey arcaneAssemblerAdvNoVis;
+
     private IThELangKey guiEssentiaImportBus;
     private IThELangKey guiEssentiaExportBus;
     private IThELangKey guiEssentiaStorageBus;
@@ -64,6 +73,8 @@ public class ThELang implements IThELang {
 
         this.tileInfusionProvider = new ThELangKey("tile.thaumicenergistics.infusion_provider.name");
         this.tileArcaneAssembler = new ThELangKey("tile.thaumicenergistics.arcane_assembler.name");
+        this.tileArcaneAssemblerAdv = new ThELangKey("tile.thaumicenergistics.arcane_assembler_adv.name");
+
 
         this.itemDiffusionCore = new ThELangKey("item.thaumicenergistics.diffusion_core.name");
         this.itemCoalescenceCore = new ThELangKey("item.thaumicenergistics.coalescence_core.name");
@@ -99,6 +110,15 @@ public class ThELang implements IThELang {
         this.arcaneAssemblerProgress = new ThELangKey("tooltip.thaumicenergistics.arcane_assembler.progress");
         this.arcaneAssemblerNoAspect = new ThELangKey("tooltip.thaumicenergistics.arcane_assembler.no_aspect");
         this.arcaneAssemblerNoVis = new ThELangKey("tooltip.thaumicenergistics.arcane_assembler.no_vis");
+
+        this.arcaneAssemblerAdvIdle = new ThELangKey("tooltip.thaumicenergistics.arcane_assembler.idle");
+        this.arcaneAssemblerAdvPrep = new ThELangKey("tooltip.thaumicenergistics.arcane_assembler.prep");
+        this.arcaneAssemblerAdvBusy = new ThELangKey("tooltip.thaumicenergistics.arcane_assembler.busy");
+        this.arcaneAssemblerAdvProgress = new ThELangKey("tooltip.thaumicenergistics.arcane_assembler.progress");
+        this.arcaneAssemblerAdvNoAspect = new ThELangKey("tooltip.thaumicenergistics.arcane_assembler.no_aspect");
+        this.arcaneAssemblerAdvNoVis = new ThELangKey("tooltip.thaumicenergistics.arcane_assembler.no_vis");
+
+
 
         this.guiEssentiaImportBus = new ThELangKey("gui.thaumicenergistics.essentia_import_bus");
         this.guiEssentiaExportBus = new ThELangKey("gui.thaumicenergistics.essentia_export_bus");
@@ -138,6 +158,11 @@ public class ThELang implements IThELang {
     public IThELangKey tileArcaneAssembler() {
         return this.tileArcaneAssembler;
     }
+    @Override
+    public IThELangKey tileArcaneAssemblerAdv() {
+        return this.tileArcaneAssemblerAdv;
+    }
+
 
     @Override
     public IThELangKey itemDiffusionCore() {
@@ -255,6 +280,37 @@ public class ThELang implements IThELang {
     }
 
     @Override
+    public IThELangKey arcaneAssemblerAdvIdle() {
+        return this.arcaneAssemblerAdvIdle;
+    }
+
+    @Override
+    public IThELangKey arcaneAssemblerAdvPrep() {
+        return this.arcaneAssemblerAdvPrep;
+    }
+
+    @Override
+    public IThELangKey arcaneAssemblerAdvBusy() {
+        return this.arcaneAssemblerAdvBusy;
+    }
+
+    @Override
+    public IThELangKey arcaneAssemblerAdvProgress() {
+        return this.arcaneAssemblerAdvProgress;
+    }
+
+    @Override
+    public IThELangKey arcaneAssemblerAdvNoAspect() {
+        return this.arcaneAssemblerAdvNoAspect;
+    }
+
+    @Override
+    public IThELangKey arcaneAssemblerAdvNoVis() {
+        return this.arcaneAssemblerAdvNoVis;
+    }
+
+
+    @Override
     public IThELangKey arcaneAssemblerIdle() {
         return this.arcaneAssemblerIdle;
     }
@@ -283,6 +339,10 @@ public class ThELang implements IThELang {
     public IThELangKey arcaneAssemblerNoVis() {
         return this.arcaneAssemblerNoVis;
     }
+
+
+
+
 
     @Override
     public IThELangKey guiEssentiaImportBus() {

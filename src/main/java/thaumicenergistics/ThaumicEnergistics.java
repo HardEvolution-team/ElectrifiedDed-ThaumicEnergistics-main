@@ -24,6 +24,7 @@ import thaumicenergistics.api.IThEUpgrades;
 import thaumicenergistics.api.ThEApi;
 import thaumicenergistics.client.ThEItemColors;
 import thaumicenergistics.client.gui.GuiHandler;
+import thaumicenergistics.client.render.ArcaneAssemblerAdvRenderer;
 import thaumicenergistics.client.render.ArcaneAssemblerRenderer;
 import thaumicenergistics.command.CommandAddVis;
 import thaumicenergistics.command.CommandDrainVis;
@@ -31,6 +32,7 @@ import thaumicenergistics.init.ModGlobals;
 import thaumicenergistics.integration.ThEIntegrationLoader;
 import thaumicenergistics.network.PacketHandler;
 import thaumicenergistics.tile.TileArcaneAssembler;
+import thaumicenergistics.tile.TileArcaneAssemblerAdv;
 import thaumicenergistics.util.ForgeUtil;
 
 import org.apache.logging.log4j.Logger;
@@ -99,10 +101,14 @@ public class ThaumicEnergistics {
         upgrades.registerUpgrade(items.arcaneTerminal(), upgrades.arcaneCharger(), 1);
         upgrades.registerUpgrade(items.arcaneInscriber(), upgrades.blankKnowledgeCore(), 1);
         upgrades.registerUpgrade(items.arcaneInscriber(), upgrades.knowledgeCore(), 1);
+
         upgrades.registerUpgrade(blocks.arcaneAssembler(), upgrades.knowledgeCore(), 1);
         upgrades.registerUpgrade(blocks.arcaneAssembler(), upgrades.arcaneCharger(), 1);
         upgrades.registerUpgrade(blocks.arcaneAssembler(), upgrades.cardSpeed(), 5);
 
+        upgrades.registerUpgrade(blocks.arcaneAssemblerAdv(), upgrades.knowledgeCore(), 1);
+        upgrades.registerUpgrade(blocks.arcaneAssemblerAdv(), upgrades.arcaneCharger(), 1);
+        upgrades.registerUpgrade(blocks.arcaneAssemblerAdv(), upgrades.cardSpeed(), 5);
 
         proxy.init(event);
 
@@ -150,7 +156,11 @@ public class ThaumicEnergistics {
         public void init(FMLInitializationEvent event){
             // Init TESR
             ClientRegistry.bindTileEntitySpecialRenderer(TileArcaneAssembler.class, new ArcaneAssemblerRenderer());
+            ClientRegistry.bindTileEntitySpecialRenderer(TileArcaneAssemblerAdv.class, new ArcaneAssemblerAdvRenderer());
+
         }
+
+
 
         public EntityPlayer getPlayerEntFromCtx(MessageContext ctx){
             return ctx.side.isClient() ? Minecraft.getMinecraft().player : ctx.getServerHandler().player;

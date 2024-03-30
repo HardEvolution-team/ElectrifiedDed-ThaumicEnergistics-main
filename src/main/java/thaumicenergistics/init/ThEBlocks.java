@@ -39,6 +39,7 @@ public class ThEBlocks implements IThEBlocks {
 
     private ITileDefinition infusionProvider;
     private ITileDefinition arcaneAssembler;
+    private ITileDefinition arcaneAssemblerAdv;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
@@ -87,5 +88,8 @@ public class ThEBlocks implements IThEBlocks {
     @Override
     public ITileDefinition arcaneAssembler() {
         return this.arcaneAssembler;
+    }
+    public ITileDefinition arcaneAssemblerAdv() {
+        return this.arcaneAssemblerAdv;
     }
 }

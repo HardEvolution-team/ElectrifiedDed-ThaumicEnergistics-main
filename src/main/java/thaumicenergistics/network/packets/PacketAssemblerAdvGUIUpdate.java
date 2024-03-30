@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import thaumicenergistics.client.gui.block.GuiArcaneAssembler;
+import thaumicenergistics.client.gui.block.GuiArcaneAssemblerAdv;
 import thaumicenergistics.tile.TileArcaneAssembler;
 import thaumicenergistics.tile.TileArcaneAssemblerAdv;
 
@@ -16,18 +17,21 @@ import java.util.HashMap;
 /**
  * @author Alex811
  */
-public class PacketAssemblerGUIUpdate implements IMessage {
+public class PacketAssemblerAdvGUIUpdate implements IMessage {
 
     public HashMap<String, Boolean> aspectExists = new HashMap<>();
     public boolean hasEnoughVis;
 
-    public PacketAssemblerGUIUpdate() {
+
+    public PacketAssemblerAdvGUIUpdate() {
     }
 
-    public PacketAssemblerGUIUpdate(TileArcaneAssembler TE) {
+    public PacketAssemblerAdvGUIUpdate(TileArcaneAssemblerAdv TE) {
         this.aspectExists = TE.getAspectExists();
         this.hasEnoughVis = TE.getHasEnoughVis();
     }
+
+
 
     @Override
     public void fromBytes(ByteBuf buf) {
@@ -47,14 +51,14 @@ public class PacketAssemblerGUIUpdate implements IMessage {
         });
     }
 
-    public static class Handler implements IMessageHandler<PacketAssemblerGUIUpdate, IMessage> {
+    public static class Handler implements IMessageHandler<PacketAssemblerAdvGUIUpdate, IMessage> {
 
         @Override
-        public IMessage onMessage(PacketAssemblerGUIUpdate message, MessageContext ctx) {
+        public IMessage onMessage(PacketAssemblerAdvGUIUpdate message, MessageContext ctx) {
             Minecraft.getMinecraft().addScheduledTask(() -> {
                 GuiScreen gui = Minecraft.getMinecraft().currentScreen;
-                if(gui instanceof GuiArcaneAssembler)
-                    ((GuiArcaneAssembler) gui).updateGUI(message.aspectExists, message.hasEnoughVis);
+                if(gui instanceof GuiArcaneAssemblerAdv)
+                    ((GuiArcaneAssemblerAdv) gui).updateGUI(message.aspectExists, message.hasEnoughVis);
             });
             return null;
         }

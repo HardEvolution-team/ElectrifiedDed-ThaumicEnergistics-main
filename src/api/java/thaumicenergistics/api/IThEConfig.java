@@ -30,6 +30,11 @@ public interface IThEConfig {
     int tickTimeArcaneAssemblerMin();
 
     int tickTimeArcaneAssemblerMax();
+    int tickTimeArcaneAssemblerAdvMin();
+
+    int tickTimeArcaneAssemblerAdvMax();
+
+
 
     TerminalStyle terminalStyle();
 
@@ -44,4 +49,5 @@ public interface IThEConfig {
     PrefixSetting aspectSearchSetting();
 
     double arcaneAssemblerParticleMultiplier();
+    double arcaneAssemblerAdvParticleMultiplier();
 }

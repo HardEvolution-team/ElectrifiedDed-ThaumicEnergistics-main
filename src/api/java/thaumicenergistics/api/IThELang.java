@@ -13,6 +13,7 @@ public interface IThELang {
     IThELangKey tileInfusionProvider();
 
     IThELangKey tileArcaneAssembler();
+    IThELangKey tileArcaneAssemblerAdv();
 
     IThELangKey itemDiffusionCore();
 
@@ -71,6 +72,19 @@ public interface IThELang {
     IThELangKey arcaneAssemblerNoAspect();
 
     IThELangKey arcaneAssemblerNoVis();
+
+    IThELangKey arcaneAssemblerAdvIdle();
+
+    IThELangKey arcaneAssemblerAdvPrep();
+
+    IThELangKey arcaneAssemblerAdvBusy();
+
+    IThELangKey arcaneAssemblerAdvProgress();
+
+    IThELangKey arcaneAssemblerAdvNoAspect();
+
+    IThELangKey arcaneAssemblerAdvNoVis();
+
 
     IThELangKey guiEssentiaImportBus();
 

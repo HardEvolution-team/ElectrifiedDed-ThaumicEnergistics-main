@@ -8,20 +8,19 @@ import org.lwjgl.opengl.GL11;
 import thaumcraft.codechicken.lib.math.MathHelper;
 import thaumicenergistics.api.ThEApi;
 import thaumicenergistics.client.gui.GuiBase;
-import thaumicenergistics.container.block.ContainerArcaneAssembler;
 import thaumicenergistics.container.block.ContainerArcaneAssemblerAdv;
 import thaumicenergistics.init.ModGlobals;
 import thaumicenergistics.network.PacketHandler;
-import thaumicenergistics.network.packets.PacketAssemblerGUIUpdateRequest;
+import thaumicenergistics.network.packets.PacketAssemblerAdvGUIUpdateRequest;
 import thaumicenergistics.network.packets.PacketSubscribe;
 
-import java.awt.Color;
+import java.awt.*;
 import java.util.HashMap;
 
 /**
  * @author Alex811
  */
-public class GuiArcaneAssembler extends GuiBase {
+public class GuiArcaneAssemblerAdv extends GuiBase {
     private static final String[] aspects = {"aer", "terra", "ignis", "aqua", "ordo", "perditio"};
     private static final int[][] aspectGUILoc = {{69, 2}, {21, 82}, {21, 25}, {117, 25}, {117, 82}, {69, 106}};
     private static final ResourceLocation BACKGROUND_INACTIVE = new ResourceLocation(ModGlobals.MOD_ID, "textures/gui/arcane_assembler/inactive.png");
@@ -29,13 +28,13 @@ public class GuiArcaneAssembler extends GuiBase {
     private static final ResourceLocation ASPECTS = new ResourceLocation(ModGlobals.MOD_ID, "textures/gui/arcane_assembler/aspects.png");
     private static final int WIDTH = 210;
     private static final int HEIGHT = 231;
-    private final ContainerArcaneAssembler container;
+    private final ContainerArcaneAssemblerAdv container;
     private final IItemHandler inv;
     private float enAlpha;
     private boolean hasEnoughVis = true;
     private HashMap<String, Boolean> aspectExists = new HashMap<>();
 
-    public GuiArcaneAssembler(ContainerArcaneAssembler container){
+    public GuiArcaneAssemblerAdv(ContainerArcaneAssemblerAdv container){
         super(container);
         this.container = container;
         this.inv = container.getInventory("cores");
@@ -56,7 +55,7 @@ public class GuiArcaneAssembler extends GuiBase {
 
     @Override
     public void initGui() {
-        PacketHandler.sendToServer(new PacketAssemblerGUIUpdateRequest(this.container.getTE()));
+        PacketHandler.sendToServer(new PacketAssemblerAdvGUIUpdateRequest(this.container.getTE()));
         this.xSize = WIDTH;
         this.ySize = HEIGHT;
         super.initGui();
@@ -65,7 +64,7 @@ public class GuiArcaneAssembler extends GuiBase {
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
         super.drawGuiContainerForegroundLayer(mouseX, mouseY);
-        this.fontRenderer.drawString(ThEApi.instance().lang().tileArcaneAssembler().getLocalizedKey(), 8, 3, 4210752);
+        this.fontRenderer.drawString(ThEApi.instance().lang().tileArcaneAssemblerAdv().getLocalizedKey(), 8, 3, 4210752);
         this.fontRenderer.drawString(I18n.format("container.inventory"), 8, this.getYSize() - 92, 4210752);
         if(!this.inv.getStackInSlot(0).isEmpty()){
             if(this.aspectExists.containsValue(false))

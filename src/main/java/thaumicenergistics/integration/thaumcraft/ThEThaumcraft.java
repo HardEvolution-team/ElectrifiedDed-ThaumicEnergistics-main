@@ -212,7 +212,7 @@ public class ThEThaumcraft implements IThEIntegration {
         ThEApi.instance().items().essentiaComponent256k().maybeStack(1).ifPresent(stack -> {
             ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation(ModGlobals.MOD_ID, "essentia_component_256k"), new ShapedArcaneRecipe(
                     recipeGroup,
-                    "ESSENTIASTORAGE256k@2",
+                    "",
                     10,
                     new AspectList(),
                     stack,
@@ -233,7 +233,7 @@ public class ThEThaumcraft implements IThEIntegration {
         ThEApi.instance().items().essentiaComponent1024k().maybeStack(1).ifPresent(stack -> {
             ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation(ModGlobals.MOD_ID, "essentia_component_1024k"), new ShapedArcaneRecipe(
                     recipeGroup,
-                    "ESSENTIASTORAGE1024k@2",
+                    "",
                     10,
                     new AspectList(),
                     stack,
@@ -254,7 +254,7 @@ public class ThEThaumcraft implements IThEIntegration {
         ThEApi.instance().items().essentiaComponent4096k().maybeStack(1).ifPresent(stack -> {
             ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation(ModGlobals.MOD_ID, "essentia_component_4096k"), new ShapedArcaneRecipe(
                     recipeGroup,
-                    "ESSENTIASTORAGE4096k@2",
+                    "",
                     10,
                     new AspectList(),
                     stack,
@@ -272,27 +272,8 @@ public class ThEThaumcraft implements IThEIntegration {
             ));
             this.addFakeCrafting(new ResourceLocation(ModGlobals.MOD_ID, "cells/essentia_cell_4096k"));
         });
-        ThEApi.instance().items().essentiaComponent16384k().maybeStack(1).ifPresent(stack -> {
-            ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation(ModGlobals.MOD_ID, "essentia_component_16384k"), new ShapedArcaneRecipe(
-                    recipeGroup,
-                    "ESSENTIASTORAGEk16384@2",
-                    10,
-                    new AspectList(),
-                    stack,
-                    "SPS",
-                    "CGC",
-                    "SCS",
-                    'S',
-                    ItemsTC.salisMundus,
-                    'C',
-                    ThEApi.instance().items().essentiaComponent4096k().maybeStack(1).orElse(ItemStack.EMPTY),
-                    'P',
-                    AEApi.instance().definitions().materials().engProcessor().maybeStack(1).orElse(ItemStack.EMPTY),
-                    'G',
-                    ItemsTC.voidSeed
-            ));
-            this.addFakeCrafting(new ResourceLocation(ModGlobals.MOD_ID, "cells/essentia_cell_16384k"));
-        });
+
+
 
 
 
@@ -465,6 +446,100 @@ public class ThEThaumcraft implements IThEIntegration {
                         ItemsTC.salisMundus,
                         TCUtil.getCrystalWithAspect(Aspect.ORDER)
                 )));
+        ThEApi.instance().items().essentiaComponent16kk().maybeStack(1).ifPresent(stack ->
+                ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ModGlobals.MOD_ID, "essentia_component_16kk"), new InfusionRecipe(
+                        "",
+                        stack,
+                        6,
+                        new AspectList().add(Aspect.CRAFT, 256).add(Aspect.EXCHANGE, 64).add(Aspect.AURA, 32).add(Aspect.MAGIC, 64).add(Aspect.METAL, 128).add(Aspect.CRYSTAL, 128),
+                        ThEApi.instance().items().essentiaComponent4096k().maybeItem().orElseThrow(() -> new NullPointerException("Missing item for recipe")),
+                        ThEApi.instance().items().coalescenceCore().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ItemsTC.salisMundus,
+                        ItemsTC.primordialPearl,
+                        ThEApi.instance().items().essentiaComponent4096k().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ThEApi.instance().items().coalescenceCore().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ThEApi.instance().items().essentiaComponent4096k().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ItemsTC.primordialPearl,
+                        ItemsTC.salisMundus
+                )));
+        ThEApi.instance().items().essentiaComponent65kk().maybeStack(1).ifPresent(stack ->
+                ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ModGlobals.MOD_ID, "essentia_component_65kk"), new InfusionRecipe(
+                        "",
+                        stack,
+                        6,
+                        new AspectList().add(Aspect.CRAFT, 256).add(Aspect.EXCHANGE, 64).add(Aspect.AURA, 32).add(Aspect.MAGIC, 64).add(Aspect.METAL, 128).add(Aspect.CRYSTAL, 128),
+                        ThEApi.instance().items().essentiaComponent16kk().maybeItem().orElseThrow(() -> new NullPointerException("Missing item for recipe")),
+                        ThEApi.instance().items().coalescenceCore().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ItemsTC.salisMundus,
+                        ItemsTC.primordialPearl,
+                        ThEApi.instance().items().essentiaComponent16kk().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ThEApi.instance().items().coalescenceCore().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ThEApi.instance().items().essentiaComponent16kk().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ItemsTC.primordialPearl,
+                        ItemsTC.salisMundus
+                )));
+        ThEApi.instance().items().essentiaComponent262kk().maybeStack(1).ifPresent(stack ->
+                ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ModGlobals.MOD_ID, "essentia_component_262kk"), new InfusionRecipe(
+                        "",
+                        stack,
+                        6,
+                        new AspectList().add(Aspect.CRAFT, 256).add(Aspect.EXCHANGE, 64).add(Aspect.AURA, 32).add(Aspect.MAGIC, 64).add(Aspect.METAL, 128).add(Aspect.CRYSTAL, 128),
+                        ThEApi.instance().items().essentiaComponent65kk().maybeItem().orElseThrow(() -> new NullPointerException("Missing item for recipe")),
+                        ThEApi.instance().items().coalescenceCore().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ItemsTC.salisMundus,
+                        ItemsTC.primordialPearl,
+                        ThEApi.instance().items().essentiaComponent65kk().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ThEApi.instance().items().coalescenceCore().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ThEApi.instance().items().essentiaComponent65kk().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ItemsTC.primordialPearl,
+                        ItemsTC.salisMundus
+                )));
+        ThEApi.instance().items().essentiaComponent1048kk().maybeStack(1).ifPresent(stack ->
+                ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ModGlobals.MOD_ID, "essentia_component_1048kk"), new InfusionRecipe(
+                        "",
+                        stack,
+                        6,
+                        new AspectList().add(Aspect.CRAFT, 1024).add(Aspect.EXCHANGE, 512).add(Aspect.AURA, 1024).add(Aspect.MAGIC, 512).add(Aspect.METAL, 4096).add(Aspect.CRYSTAL, 512),
+                        ThEApi.instance().items().essentiaComponent262kk().maybeItem().orElseThrow(() -> new NullPointerException("Missing item for recipe")),
+                        ThEApi.instance().items().coalescenceCore().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ItemsTC.salisMundus,
+                        ItemsTC.primordialPearl,
+                        ThEApi.instance().items().essentiaComponent262kk().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ThEApi.instance().items().coalescenceCore().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ThEApi.instance().items().essentiaComponent262kk().maybeStack(1).orElse(ItemStack.EMPTY),
+                        ItemsTC.primordialPearl,
+                        ItemsTC.salisMundus
+                )));
+        ThEApi.instance().items().primalIngot().maybeStack(4).ifPresent(stack ->
+                ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ModGlobals.MOD_ID, "primalIngot"), new InfusionRecipe(
+                        "",
+                        stack,
+                        6,
+                        new AspectList().add(Aspect.CRAFT, 32).add(Aspect.EXCHANGE, 16).add(Aspect.AURA, 8).add(Aspect.MAGIC, 16).add(Aspect.METAL, 128).add(Aspect.CRYSTAL, 16),
+                        ItemsTC.ingots,
+                        ItemsTC.salisMundus,
+                        ItemsTC.primordialPearl,
+                        ItemsTC.salisMundus,
+                        ItemsTC.ingots,
+                        ItemsTC.ingots,
+                        ItemsTC.ingots,
+                        ItemsTC.ingots,
+                        ItemsTC.salisMundus,
+                        ItemsTC.primordialPearl,
+                        ItemsTC.salisMundus
+
+                        )));
+
+
+
+
+
+
+
+
+
+
+
     }
     private void addFakeCrafting(ResourceLocation resourceLocation) {
         IForgeRegistryEntry entry = ForgeUtil.getRegistryEntry(IRecipe.class, resourceLocation);

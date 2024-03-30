@@ -109,13 +109,13 @@ public class ItemEssentiaCell extends ItemBase implements IStorageCell<IAEEssent
             case "4096":
                 return ThEApi.instance().items().essentiaComponent4096k().maybeStack(1);
             case "16384":
-                return ThEApi.instance().items().essentiaComponent16384k().maybeStack(1);
+                return ThEApi.instance().items().essentiaComponent16kk().maybeStack(1);
             case "65536":
-                return ThEApi.instance().items().essentiaComponent65536k().maybeStack(1);
+                return ThEApi.instance().items().essentiaComponent65kk().maybeStack(1);
             case "262144":
-                return ThEApi.instance().items().essentiaComponent262144k().maybeStack(1);
+                return ThEApi.instance().items().essentiaComponent262kk().maybeStack(1);
             case "1048576":
-                return ThEApi.instance().items().essentiaComponent1048576k().maybeStack(1);
+                return ThEApi.instance().items().essentiaComponent1048kk().maybeStack(1);
 
 
 
