@@ -58,8 +58,6 @@ public class ThEConfig implements IThEConfig {
 
         @Name("Arcane Assembler Particle Multiplier")
         public double arcaneAssemblerParticleMultiplier = 1.0;
-        @Name("Arcane Assembler Particle Multiplier")
-        public double arcaneAssemblerAdvParticleMultiplier = 1.0;
         private Client() {
 
         }
@@ -85,13 +83,6 @@ public class ThEConfig implements IThEConfig {
         public int tickTimeArcaneAssemblerMin = 2;
         @Name("Arcane Assembler Max")
         public int tickTimeArcaneAssemblerMax = 40;
-
-        @Name("Adv Arcane Assembler Min")
-        public int tickTimeArcaneAssemblerAdvMin = 1;
-        @Name("Adv Arcane Assembler Max")
-        public int tickTimeArcaneAssemblerAdvMax = 10;
-
-
 
 
 
@@ -154,16 +145,6 @@ public class ThEConfig implements IThEConfig {
     public int tickTimeArcaneAssemblerMax(){
         return tickRates.tickTimeArcaneAssemblerMax;
     }
-    @Override
-    public int tickTimeArcaneAssemblerAdvMin(){
-        return tickRates.tickTimeArcaneAssemblerAdvMin;
-    }
-
-    @Override
-    public int tickTimeArcaneAssemblerAdvMax(){
-        return tickRates.tickTimeArcaneAssemblerAdvMax;
-    }
-
 
     @Override
     public TerminalStyle terminalStyle() {
@@ -200,11 +181,6 @@ public class ThEConfig implements IThEConfig {
         return client.arcaneAssemblerParticleMultiplier;
     }
 
-
-    @Override
-    public double arcaneAssemblerAdvParticleMultiplier() {
-        return client.arcaneAssemblerAdvParticleMultiplier;
-    }
 
 
     public static void save() {

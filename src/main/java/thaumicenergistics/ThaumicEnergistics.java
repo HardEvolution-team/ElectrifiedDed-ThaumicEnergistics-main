@@ -2,6 +2,7 @@ package thaumicenergistics;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
@@ -24,7 +25,6 @@ import thaumicenergistics.api.IThEUpgrades;
 import thaumicenergistics.api.ThEApi;
 import thaumicenergistics.client.ThEItemColors;
 import thaumicenergistics.client.gui.GuiHandler;
-import thaumicenergistics.client.render.ArcaneAssemblerAdvRenderer;
 import thaumicenergistics.client.render.ArcaneAssemblerRenderer;
 import thaumicenergistics.command.CommandAddVis;
 import thaumicenergistics.command.CommandDrainVis;
@@ -32,7 +32,6 @@ import thaumicenergistics.init.ModGlobals;
 import thaumicenergistics.integration.ThEIntegrationLoader;
 import thaumicenergistics.network.PacketHandler;
 import thaumicenergistics.tile.TileArcaneAssembler;
-import thaumicenergistics.tile.TileArcaneAssemblerAdv;
 import thaumicenergistics.util.ForgeUtil;
 
 import org.apache.logging.log4j.Logger;
@@ -44,9 +43,17 @@ import org.apache.logging.log4j.Logger;
  *
  * @author Nividica
  */
-@Mod(modid = ModGlobals.MOD_ID, name = ModGlobals.MOD_NAME, version = ModGlobals.MOD_VERSION, dependencies = ModGlobals.MOD_DEPENDENCIES)
+@Mod(modid = ModGlobals.MOD_ID, name = ModGlobals.MOD_NAME, version = ModGlobals.MOD_VERSION)
 @Mod.EventBusSubscriber
 public class ThaumicEnergistics {
+
+    public static ResourceLocation getIdentifier(final String name) {
+        return new ResourceLocation(ModGlobals.MOD_ID, name);
+    }
+    @SidedProxy(clientSide = "com.thaumicenergistics.proxy.ClientProxy", serverSide = "com.thaumicenergistics.proxy.CommonProxy")
+    public static IProxy proxy;
+
+
 
     /**
      * Singleton instance
@@ -57,8 +64,7 @@ public class ThaumicEnergistics {
     /**
      * Proxy class that runs code that should be strictly on the physical client
      */
-    @SidedProxy
-    public static IProxy proxy;
+
 
     /**
      * Thaumic Energistics Logger
@@ -106,9 +112,6 @@ public class ThaumicEnergistics {
         upgrades.registerUpgrade(blocks.arcaneAssembler(), upgrades.arcaneCharger(), 1);
         upgrades.registerUpgrade(blocks.arcaneAssembler(), upgrades.cardSpeed(), 5);
 
-        upgrades.registerUpgrade(blocks.arcaneAssemblerAdv(), upgrades.knowledgeCore(), 1);
-        upgrades.registerUpgrade(blocks.arcaneAssemblerAdv(), upgrades.arcaneCharger(), 1);
-        upgrades.registerUpgrade(blocks.arcaneAssemblerAdv(), upgrades.cardSpeed(), 5);
 
         proxy.init(event);
 
@@ -152,11 +155,11 @@ public class ThaumicEnergistics {
             ConfigManager.sync(ModGlobals.MOD_ID, Config.Type.INSTANCE);
     }
 
+
     public static class ClientProxy implements IProxy{
         public void init(FMLInitializationEvent event){
             // Init TESR
             ClientRegistry.bindTileEntitySpecialRenderer(TileArcaneAssembler.class, new ArcaneAssemblerRenderer());
-            ClientRegistry.bindTileEntitySpecialRenderer(TileArcaneAssemblerAdv.class, new ArcaneAssemblerAdvRenderer());
 
         }
 
@@ -172,6 +175,9 @@ public class ThaumicEnergistics {
             return ctx.getServerHandler().player;
         }
     }
+
+
+
 
     public interface IProxy{
         default void preInit(FMLPreInitializationEvent event){}

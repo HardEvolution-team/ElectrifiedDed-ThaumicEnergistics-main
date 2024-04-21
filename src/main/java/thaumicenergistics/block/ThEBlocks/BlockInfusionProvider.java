@@ -1,4 +1,4 @@
-package thaumicenergistics.block;
+package thaumicenergistics.block.ThEBlocks;
 
 import javax.annotation.Nullable;
 
@@ -17,6 +17,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import thaumicenergistics.api.storage.IAEEssentiaStack;
+import thaumicenergistics.block.BlockNetwork;
 import thaumicenergistics.client.render.IThEModel;
 import thaumicenergistics.tile.TileInfusionProvider;
 

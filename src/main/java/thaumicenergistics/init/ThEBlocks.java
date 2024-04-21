@@ -18,9 +18,9 @@ import appeng.api.definitions.IBlockDefinition;
 import appeng.api.definitions.ITileDefinition;
 
 import thaumicenergistics.api.IThEBlocks;
-import thaumicenergistics.block.BlockArcaneAssembler;
+import thaumicenergistics.block.ThEBlocks.BlockArcaneAssembler;
 import thaumicenergistics.block.BlockBase;
-import thaumicenergistics.block.BlockInfusionProvider;
+import thaumicenergistics.block.ThEBlocks.BlockInfusionProvider;
 import thaumicenergistics.client.render.IThEModel;
 import thaumicenergistics.definitions.ThEBlockDefinition;
 import thaumicenergistics.definitions.ThETileDefinition;
@@ -39,7 +39,6 @@ public class ThEBlocks implements IThEBlocks {
 
     private ITileDefinition infusionProvider;
     private ITileDefinition arcaneAssembler;
-    private ITileDefinition arcaneAssemblerAdv;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
@@ -89,7 +88,5 @@ public class ThEBlocks implements IThEBlocks {
     public ITileDefinition arcaneAssembler() {
         return this.arcaneAssembler;
     }
-    public ITileDefinition arcaneAssemblerAdv() {
-        return this.arcaneAssemblerAdv;
-    }
+
 }

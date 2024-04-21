@@ -9,7 +9,6 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import thaumicenergistics.client.gui.block.GuiArcaneAssembler;
 import thaumicenergistics.tile.TileArcaneAssembler;
-import thaumicenergistics.tile.TileArcaneAssemblerAdv;
 
 import java.util.HashMap;
 

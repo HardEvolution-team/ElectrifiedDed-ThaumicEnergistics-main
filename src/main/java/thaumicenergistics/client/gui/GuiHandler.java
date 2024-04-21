@@ -15,14 +15,12 @@ import appeng.api.util.AEPartLocation;
 
 import thaumicenergistics.ThaumicEnergistics;
 import thaumicenergistics.client.gui.block.GuiArcaneAssembler;
-import thaumicenergistics.client.gui.block.GuiArcaneAssemblerAdv;
 import thaumicenergistics.client.gui.crafting.GuiCraftAmountBridge;
 import thaumicenergistics.client.gui.crafting.GuiCraftConfirmBridge;
 import thaumicenergistics.client.gui.crafting.GuiCraftingStatusBridge;
 import thaumicenergistics.client.gui.item.GuiKnowledgeCore;
 import thaumicenergistics.client.gui.part.*;
 import thaumicenergistics.container.block.ContainerArcaneAssembler;
-import thaumicenergistics.container.block.ContainerArcaneAssemblerAdv;
 import thaumicenergistics.container.crafting.ContainerCraftAmountBridge;
 import thaumicenergistics.container.crafting.ContainerCraftConfirmBridge;
 import thaumicenergistics.container.crafting.ContainerCraftingStatusBridge;
@@ -31,7 +29,6 @@ import thaumicenergistics.container.part.*;
 import thaumicenergistics.init.ModGUIs;
 import thaumicenergistics.part.*;
 import thaumicenergistics.tile.TileArcaneAssembler;
-import thaumicenergistics.tile.TileArcaneAssemblerAdv;
 
 /**
  * @author BrockWS
@@ -93,8 +90,6 @@ public class GuiHandler implements IGuiHandler {
         switch (guiID) {
             case ARCANE_ASSEMBLER:
                 return new ContainerArcaneAssembler(player, (TileArcaneAssembler) te);
-            case ARCANE_ASSEMBLER_ADV:
-                return new ContainerArcaneAssemblerAdv(player, (TileArcaneAssemblerAdv) te);
             case ESSENTIA_IMPORT_BUS:
                 return new ContainerEssentiaImportBus(player, (PartEssentiaImportBus) part);
             case ESSENTIA_EXPORT_BUS:
@@ -137,8 +132,6 @@ public class GuiHandler implements IGuiHandler {
         switch (guiID) {
             case ARCANE_ASSEMBLER:
                 return new GuiArcaneAssembler(new ContainerArcaneAssembler(player, (TileArcaneAssembler) te));
-            case ARCANE_ASSEMBLER_ADV:
-                return new GuiArcaneAssemblerAdv(new ContainerArcaneAssemblerAdv(player, (TileArcaneAssemblerAdv) te));
             case ESSENTIA_IMPORT_BUS:
                 return new GuiEssentiaImportBus(new ContainerEssentiaImportBus(player, (PartEssentiaImportBus) part));
             case ESSENTIA_EXPORT_BUS:

@@ -1,4 +1,4 @@
-package thaumicenergistics.block;
+package thaumicenergistics.block.ThEBlocks;
 
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.block.SoundType;
@@ -16,6 +16,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import thaumicenergistics.block.BlockNetwork;
 import thaumicenergistics.client.render.IThEModel;
 import thaumicenergistics.tile.TileArcaneAssembler;
 

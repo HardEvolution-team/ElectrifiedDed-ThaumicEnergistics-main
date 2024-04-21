@@ -9,7 +9,6 @@ import thaumcraft.codechicken.lib.math.MathHelper;
 import thaumicenergistics.api.ThEApi;
 import thaumicenergistics.client.gui.GuiBase;
 import thaumicenergistics.container.block.ContainerArcaneAssembler;
-import thaumicenergistics.container.block.ContainerArcaneAssemblerAdv;
 import thaumicenergistics.init.ModGlobals;
 import thaumicenergistics.network.PacketHandler;
 import thaumicenergistics.network.packets.PacketAssemblerGUIUpdateRequest;
