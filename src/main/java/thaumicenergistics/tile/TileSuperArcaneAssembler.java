@@ -60,7 +60,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Stream;
     /**
-     * @author Alex811
+     * @author MilkiBlack
      */
     public class TileSuperArcaneAssembler extends TileNetwork implements IThESubscribable, IThEInvTile, IThEGuiTile, ICraftingProvider, IStorageMonitorable, IGridTickable {
         protected static final int BASE_STEP = 15;               // step to increase progress by / tick (not counting upgrades)
