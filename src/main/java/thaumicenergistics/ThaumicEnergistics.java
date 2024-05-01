@@ -2,7 +2,6 @@ package thaumicenergistics;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
@@ -17,8 +16,8 @@ import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
-
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import org.apache.logging.log4j.Logger;
 import thaumicenergistics.api.IThEBlocks;
 import thaumicenergistics.api.IThEItems;
 import thaumicenergistics.api.IThEUpgrades;
@@ -26,15 +25,15 @@ import thaumicenergistics.api.ThEApi;
 import thaumicenergistics.client.ThEItemColors;
 import thaumicenergistics.client.gui.GuiHandler;
 import thaumicenergistics.client.render.ArcaneAssemblerRenderer;
+import thaumicenergistics.client.render.SuperArcaneAssemblerRenderer;
 import thaumicenergistics.command.CommandAddVis;
 import thaumicenergistics.command.CommandDrainVis;
 import thaumicenergistics.init.ModGlobals;
 import thaumicenergistics.integration.ThEIntegrationLoader;
 import thaumicenergistics.network.PacketHandler;
 import thaumicenergistics.tile.TileArcaneAssembler;
+import thaumicenergistics.tile.TileSuperArcaneAssembler;
 import thaumicenergistics.util.ForgeUtil;
-
-import org.apache.logging.log4j.Logger;
 
 /**
  * <strong>Thaumic Energistics</strong>
@@ -43,17 +42,9 @@ import org.apache.logging.log4j.Logger;
  *
  * @author Nividica
  */
-@Mod(modid = ModGlobals.MOD_ID, name = ModGlobals.MOD_NAME, version = ModGlobals.MOD_VERSION)
+@Mod(modid = ModGlobals.MOD_ID, name = ModGlobals.MOD_NAME, version = ModGlobals.MOD_VERSION, dependencies = ModGlobals.MOD_DEPENDENCIES)
 @Mod.EventBusSubscriber
 public class ThaumicEnergistics {
-
-    public static ResourceLocation getIdentifier(final String name) {
-        return new ResourceLocation(ModGlobals.MOD_ID, name);
-    }
-    @SidedProxy(clientSide = "com.thaumicenergistics.proxy.ClientProxy", serverSide = "com.thaumicenergistics.proxy.CommonProxy")
-    public static IProxy proxy;
-
-
 
     /**
      * Singleton instance
@@ -64,7 +55,8 @@ public class ThaumicEnergistics {
     /**
      * Proxy class that runs code that should be strictly on the physical client
      */
-
+    @SidedProxy
+    public static IProxy proxy;
 
     /**
      * Thaumic Energistics Logger
@@ -107,10 +99,13 @@ public class ThaumicEnergistics {
         upgrades.registerUpgrade(items.arcaneTerminal(), upgrades.arcaneCharger(), 1);
         upgrades.registerUpgrade(items.arcaneInscriber(), upgrades.blankKnowledgeCore(), 1);
         upgrades.registerUpgrade(items.arcaneInscriber(), upgrades.knowledgeCore(), 1);
-
         upgrades.registerUpgrade(blocks.arcaneAssembler(), upgrades.knowledgeCore(), 1);
-        upgrades.registerUpgrade(blocks.arcaneAssembler(), upgrades.arcaneCharger(), 1);
+        upgrades.registerUpgrade(blocks.superarcaneAssembler(),upgrades.knowledgeCore(),1);
+        upgrades.registerUpgrade(blocks.arcaneAssembler(), upgrades.arcaneCharger(), 2);
+        upgrades.registerUpgrade(blocks.superarcaneAssembler(),upgrades.arcaneCharger(),1);
         upgrades.registerUpgrade(blocks.arcaneAssembler(), upgrades.cardSpeed(), 5);
+        upgrades.registerUpgrade(blocks.superarcaneAssembler(), upgrades.arcaneCharger(), 1);
+        upgrades.registerUpgrade(blocks.superarcaneAssembler(),upgrades.cardSpeed(),5);
 
 
         proxy.init(event);
@@ -155,15 +150,12 @@ public class ThaumicEnergistics {
             ConfigManager.sync(ModGlobals.MOD_ID, Config.Type.INSTANCE);
     }
 
-
     public static class ClientProxy implements IProxy{
         public void init(FMLInitializationEvent event){
             // Init TESR
             ClientRegistry.bindTileEntitySpecialRenderer(TileArcaneAssembler.class, new ArcaneAssemblerRenderer());
-
+            ClientRegistry.bindTileEntitySpecialRenderer(TileSuperArcaneAssembler.class, new SuperArcaneAssemblerRenderer());
         }
-
-
 
         public EntityPlayer getPlayerEntFromCtx(MessageContext ctx){
             return ctx.side.isClient() ? Minecraft.getMinecraft().player : ctx.getServerHandler().player;
@@ -175,9 +167,6 @@ public class ThaumicEnergistics {
             return ctx.getServerHandler().player;
         }
     }
-
-
-
 
     public interface IProxy{
         default void preInit(FMLPreInitializationEvent event){}

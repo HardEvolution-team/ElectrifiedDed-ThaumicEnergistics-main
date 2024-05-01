@@ -40,6 +40,7 @@ public class PacketHandler {
         PacketHandler.INSTANCE.registerMessage(PacketIsArcaneUpdate.Handler.class, PacketIsArcaneUpdate.class, PacketHandler.nextID(), Side.CLIENT);
         PacketHandler.INSTANCE.registerMessage(PacketPlaySound.Handler.class, PacketPlaySound.class, PacketHandler.nextID(), Side.CLIENT);
         PacketHandler.INSTANCE.registerMessage(PacketAssemblerGUIUpdate.Handler.class, PacketAssemblerGUIUpdate.class, PacketHandler.nextID(), Side.CLIENT);
+        PacketHandler.INSTANCE.registerMessage(PacketSuperAssemblerGUIUpdate.Handler.class,PacketSuperAssemblerGUIUpdate.class,PacketHandler.nextID(),Side.CLIENT);
 
         PacketHandler.INSTANCE.registerMessage(PacketUIAction.Handler.class, PacketUIAction.class, PacketHandler.nextID(), Side.SERVER);
         PacketHandler.INSTANCE.registerMessage(PacketSettingChange.HandlerServer.class, PacketSettingChange.class, PacketHandler.nextID(), Side.SERVER);
@@ -49,6 +50,7 @@ public class PacketHandler {
         PacketHandler.INSTANCE.registerMessage(PacketSubscribe.Handler.class, PacketSubscribe.class, PacketHandler.nextID(), Side.SERVER);
         PacketHandler.INSTANCE.registerMessage(PacketEssentiaFilterAction.Handler.class, PacketEssentiaFilterAction.class, PacketHandler.nextID(), Side.SERVER);
         PacketHandler.INSTANCE.registerMessage(PacketAssemblerGUIUpdateRequest.Handler.class, PacketAssemblerGUIUpdateRequest.class, PacketHandler.nextID(), Side.SERVER);
+        PacketHandler.INSTANCE.registerMessage(PacketSuperAssemblerGUIUpdateRequest.Handler.class,PacketSuperAssemblerGUIUpdateRequest.class,PacketHandler.nextID(),Side.CLIENT);
         PacketHandler.INSTANCE.registerMessage(PacketGhostEssentia.Handler.class, PacketGhostEssentia.class, PacketHandler.nextID(), Side.SERVER);
     }
 

@@ -13,6 +13,8 @@ public interface IThEUpgrades {
 
     IThEUpgrade arcaneCharger();
 
+    IThEUpgrade SuperArcaneCharger();
+
     IThEUpgrade knowledgeCore();
 
     IThEUpgrade blankKnowledgeCore();

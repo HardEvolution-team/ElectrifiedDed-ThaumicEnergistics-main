@@ -13,4 +13,5 @@ public interface IThEBlocks {
 
     ITileDefinition infusionProvider();
     ITileDefinition arcaneAssembler();
+    ITileDefinition superarcaneAssembler();
 }

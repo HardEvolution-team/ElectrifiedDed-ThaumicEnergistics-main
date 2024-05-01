@@ -18,14 +18,16 @@ import appeng.api.definitions.IBlockDefinition;
 import appeng.api.definitions.ITileDefinition;
 
 import thaumicenergistics.api.IThEBlocks;
-import thaumicenergistics.block.ThEBlocks.BlockArcaneAssembler;
+import thaumicenergistics.block.BlockArcaneAssembler;
 import thaumicenergistics.block.BlockBase;
-import thaumicenergistics.block.ThEBlocks.BlockInfusionProvider;
+import thaumicenergistics.block.BlockInfusionProvider;
+import thaumicenergistics.block.BlockSuperArcaneAssembler;
 import thaumicenergistics.client.render.IThEModel;
 import thaumicenergistics.definitions.ThEBlockDefinition;
 import thaumicenergistics.definitions.ThETileDefinition;
 import thaumicenergistics.tile.TileArcaneAssembler;
 import thaumicenergistics.tile.TileInfusionProvider;
+import thaumicenergistics.tile.TileSuperArcaneAssembler;
 
 import static thaumicenergistics.ThaumicEnergistics.LOGGER;
 
@@ -39,6 +41,7 @@ public class ThEBlocks implements IThEBlocks {
 
     private ITileDefinition infusionProvider;
     private ITileDefinition arcaneAssembler;
+    private ITileDefinition superarcaneAssembler;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
@@ -77,6 +80,7 @@ public class ThEBlocks implements IThEBlocks {
     public ThEBlocks() {
         this.infusionProvider = ThEBlocks.createTile(new BlockInfusionProvider("infusion_provider"), TileInfusionProvider.class);
         this.arcaneAssembler = ThEBlocks.createTile(new BlockArcaneAssembler("arcane_assembler"), TileArcaneAssembler.class);
+        this.superarcaneAssembler = ThEBlocks.createTile(new BlockSuperArcaneAssembler("super_arcane_assembler"), TileSuperArcaneAssembler.class);
     }
 
     @Override
@@ -89,4 +93,8 @@ public class ThEBlocks implements IThEBlocks {
         return this.arcaneAssembler;
     }
 
+    @Override
+    public ITileDefinition superarcaneAssembler() {
+        return this.superarcaneAssembler;
+    }
 }

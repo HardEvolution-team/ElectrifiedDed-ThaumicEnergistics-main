@@ -4,6 +4,7 @@ itemGroup.ThaumicEnergistics=Thaumic Energistics
 # Блоки
 tile.thaumicenergistics.infusion_provider.name=Поставщик наполнения эссенции
 tile.thaumicenergistics.arcane_assembler.name=Магический Сборщик
+tile.thaumicenergistics.super_arcane_assembler.name=Совершенный Магический Сборщик
 
 # Предметы
 item.thaumicenergistics.diffusion_core.name=Ядро рассеивания

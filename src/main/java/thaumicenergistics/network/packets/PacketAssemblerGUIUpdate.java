@@ -28,6 +28,7 @@ public class PacketAssemblerGUIUpdate implements IMessage {
         this.hasEnoughVis = TE.getHasEnoughVis();
     }
 
+
     @Override
     public void fromBytes(ByteBuf buf) {
         this.hasEnoughVis = buf.readBoolean();

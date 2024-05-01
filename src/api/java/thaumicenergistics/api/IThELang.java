@@ -65,12 +65,18 @@ public interface IThELang {
     IThELangKey arcaneAssemblerPrep();
 
     IThELangKey arcaneAssemblerBusy();
+    IThELangKey superarcaneAssemblerBusy();
 
     IThELangKey arcaneAssemblerProgress();
+    IThELangKey superarcaneAssemblerProgress();
 
     IThELangKey arcaneAssemblerNoAspect();
+    IThELangKey superarcaneAssemblerPrep();
 
     IThELangKey arcaneAssemblerNoVis();
+    IThELangKey superarcaneAssemblerNoAspect();
+    IThELangKey superarcaneAssemblerNoVis();
+    IThELangKey superarcaneAssemblerIdle();
 
 
 

@@ -58,6 +58,7 @@ public class ThEConfig implements IThEConfig {
 
         @Name("Arcane Assembler Particle Multiplier")
         public double arcaneAssemblerParticleMultiplier = 1.0;
+
         private Client() {
 
         }
@@ -81,10 +82,12 @@ public class ThEConfig implements IThEConfig {
 
         @Name("Arcane Assembler Min")
         public int tickTimeArcaneAssemblerMin = 2;
+        @Name("Super Arcane Assembler Min")
+        public int tickTimeSuperArcaneAssemblerMin = 5;
         @Name("Arcane Assembler Max")
         public int tickTimeArcaneAssemblerMax = 40;
-
-
+        @Name("Super Arcane Assembler Max")
+        public int tickTimeSuperArcaneAssemblerMax = 70;
 
         private TickRates() {
 
@@ -142,8 +145,18 @@ public class ThEConfig implements IThEConfig {
     }
 
     @Override
+    public int tickTimeSuperArcaneAssemblerMin() {
+        return tickRates.tickTimeSuperArcaneAssemblerMin;
+    }
+
+    @Override
     public int tickTimeArcaneAssemblerMax(){
         return tickRates.tickTimeArcaneAssemblerMax;
+    }
+
+    @Override
+    public int tickTimeSuperArcaneAssemblerMax() {
+        return tickRates.tickTimeSuperArcaneAssemblerMax;
     }
 
     @Override
@@ -181,7 +194,10 @@ public class ThEConfig implements IThEConfig {
         return client.arcaneAssemblerParticleMultiplier;
     }
 
-
+    @Override
+    public double superarcaneAssemblerParticleMultiplier() {
+        return 0;
+    }
 
     public static void save() {
         ConfigManager.sync(ModGlobals.MOD_ID, Config.Type.INSTANCE);

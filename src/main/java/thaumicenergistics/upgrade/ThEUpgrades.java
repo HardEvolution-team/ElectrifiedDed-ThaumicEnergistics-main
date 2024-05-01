@@ -18,6 +18,7 @@ import thaumicenergistics.api.IThEUpgrades;
 public class ThEUpgrades implements IThEUpgrades {
 
     private IThEUpgrade arcaneCharger;
+    private IThEUpgrade SuperArcaneCharger;
     private IThEUpgrade knowledgeCore;
     private IThEUpgrade blankKnowledgeCore;
     private IThEUpgrade cardSpeed;
@@ -27,6 +28,7 @@ public class ThEUpgrades implements IThEUpgrades {
         this.upgrades = new ArrayList<>();
 
         this.upgrades.add(this.arcaneCharger = new ThEUpgrade(items.upgradeArcane()));
+        this.upgrades.add(this.SuperArcaneCharger = new ThEUpgrade(items.superupgradeArcane()));
         this.upgrades.add(this.knowledgeCore = new ThEUpgrade(items.knowledgeCore()));
         this.upgrades.add(this.blankKnowledgeCore = new ThEUpgrade(items.blankKnowledgeCore()));
         this.upgrades.add(this.cardSpeed = new ThEUpgrade(AEApi.instance().definitions().materials().cardSpeed()));
@@ -35,6 +37,11 @@ public class ThEUpgrades implements IThEUpgrades {
     @Override
     public IThEUpgrade arcaneCharger() {
         return this.arcaneCharger;
+    }
+
+    @Override
+    public IThEUpgrade SuperArcaneCharger() {
+        return this.SuperArcaneCharger;
     }
 
 

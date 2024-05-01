@@ -105,22 +105,17 @@ public interface IThEItems {
     IItemDefinition essentiaComponent1048kk();
 
 
+    IItemDefinition essentiaComponent16384k();
 
+    IItemDefinition essentiaComponent65536k();
 
+    IItemDefinition essentiaComponent262144k();
 
-
-
-
-
-
-
-
-
-
-
-
+    IItemDefinition essentiaComponent1048576k();
 
     IItemDefinition upgradeArcane();
+
+    IItemDefinition superupgradeArcane();
 
     IItemDefinition knowledgeCore();
 

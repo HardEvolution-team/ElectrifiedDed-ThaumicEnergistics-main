@@ -28,8 +28,10 @@ public interface IThEConfig {
     int tickTimeEssentiaStorageBusMax();
 
     int tickTimeArcaneAssemblerMin();
+    int tickTimeSuperArcaneAssemblerMin();
 
     int tickTimeArcaneAssemblerMax();
+    int tickTimeSuperArcaneAssemblerMax();
     TerminalStyle terminalStyle();
 
     SearchBoxMode searchBoxMode();
@@ -43,5 +45,6 @@ public interface IThEConfig {
     PrefixSetting aspectSearchSetting();
 
     double arcaneAssemblerParticleMultiplier();
+    double superarcaneAssemblerParticleMultiplier();
 
 }

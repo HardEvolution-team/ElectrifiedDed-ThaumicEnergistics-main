@@ -1,6 +1,5 @@
 package thaumicenergistics;
 
-import net.minecraft.util.ResourceLocation;
 import thaumicenergistics.api.*;
 import thaumicenergistics.config.ThEConfig;
 import thaumicenergistics.init.*;

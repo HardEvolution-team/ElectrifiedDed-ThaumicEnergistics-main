@@ -6,6 +6,7 @@ import appeng.api.storage.data.IAEItemStack;
 import appeng.api.util.IConfigurableObject;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.nbt.NBTBase;
@@ -178,6 +179,53 @@ public class ContainerArcaneInscriber extends ContainerArcaneTerminal implements
         this.addSlotToContainer(this.resultSlot = new SlotArcaneResult(this, this.player, 0, offsetX + 84, offsetY + 18));
         this.onMatrixChanged();
     }
+    @Override
+    public ItemStack transferStackInSlot(EntityPlayer player, int index) {
+        ItemStack itemstack = ItemStack.EMPTY;
+        Slot slot = this.inventorySlots.get(index);
+
+        if (slot != null && slot.getHasStack()) {
+            ItemStack stack = slot.getStack();
+            itemstack = stack.copy();
+
+            int knowledgeCoreSlotIndex = 16; // Предположим, что слот ядра знаний имеет индекс 16
+            int playerInventoryStart = 17; // Первый слот инвентаря игрока
+            int playerHotbarEnd = playerInventoryStart + 36; // Последний слот инвентаря игрока
+
+            // Проверяем, из какого слота забирается предмет
+            if (index == knowledgeCoreSlotIndex) { // Если забираем ядро знаний
+                if (!this.mergeItemStack(stack, playerInventoryStart, playerHotbarEnd, true)) {
+                    return ItemStack.EMPTY;
+                }
+            } else if (index >= playerInventoryStart && index < playerHotbarEnd) { // Если забираем предмет из инвентаря игрока
+                if (stack.getItem() instanceof ItemKnowledgeCore) {
+                    if (!this.mergeItemStack(stack, knowledgeCoreSlotIndex, knowledgeCoreSlotIndex + 1, false)) {
+                        return ItemStack.EMPTY;
+                    }
+                } else {
+                    // Здесь может быть логика для обработки других предметов, если это необходимо
+                }
+            } else {
+                // Здесь может быть обработка для других слотов, если это необходимо
+            }
+
+            if (stack.isEmpty()) {
+                slot.putStack(ItemStack.EMPTY);
+            } else {
+                slot.onSlotChanged();
+            }
+
+            if (itemstack.getCount() == stack.getCount()) {
+                return ItemStack.EMPTY;
+            }
+
+            slot.onTake(player, stack);
+        }
+
+        return itemstack;
+    }
+
+
 
     @Override
     protected void addUpgradeSlots(int offsetX, int offsetY) {
