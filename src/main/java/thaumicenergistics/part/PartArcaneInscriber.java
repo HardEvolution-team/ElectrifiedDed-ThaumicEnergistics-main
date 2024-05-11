@@ -50,6 +50,6 @@ public class PartArcaneInscriber extends PartArcaneTerminal {
 
     @Override
     public void getDrops(List<ItemStack> list, boolean b) {
-        list.addAll(ItemHandlerUtil.getInventoryAsList(this.getInventoryByName("upgrades")));
+//        list.addAll(ItemHandlerUtil.getInventoryAsList(this.getInventoryByName("upgrades")));
     }
 }

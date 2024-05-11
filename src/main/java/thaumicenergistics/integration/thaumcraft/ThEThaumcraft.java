@@ -426,7 +426,6 @@ public class ThEThaumcraft implements IThEIntegration {
                         ThEApi.instance().items().coalescenceCore().maybeStack(1).orElse(ItemStack.EMPTY),
                         ItemsTC.salisMundus
                 )));
-
     }
     private void addFakeCrafting(ResourceLocation resourceLocation) {
         IForgeRegistryEntry entry = ForgeUtil.getRegistryEntry(IRecipe.class, resourceLocation);

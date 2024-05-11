@@ -378,8 +378,8 @@ public class TileArcaneAssembler extends TileNetwork implements IThESubscribable
 
     @Override
     public void getDrops(World world, BlockPos blockPos, List<ItemStack> list) {
-        super.getDrops(world, blockPos, list);
-        this.coreInv.iterator().forEachRemaining(list::add);
-        this.upgradeInv.iterator().forEachRemaining(list::add);
+//        super.getDrops(world, blockPos, list);
+//        this.coreInv.iterator().forEachRemaining(list::add);
+//        this.upgradeInv.iterator().forEachRemaining(list::add);
     }
 }
