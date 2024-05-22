@@ -44,6 +44,10 @@ runServer {
 
 repositories {
     maven {
+        name 'IC2'
+        url 'http://maven.ic2.player.to'
+    }
+    maven {
         url "https://cursemaven.com"
     }
     maven {
@@ -65,7 +69,11 @@ repositories {
 }
 
 dependencies {
-    provided "mezz.jei:jei_${version_jei}:api"
+
+    compileOnly "curse.maven:industrialupgrade-372007:4998877"
+    runtimeOnly "curse.maven:industrialupgrade-372007:4998877"
+    provided "curse.maven:industrial-craft-242638:3838713"
+    provided "curse.maven:had-enough-items-557549:5229422"
     provided "curse.maven:inventory-tweaks-223094:${version_it}"
     provided "curse.maven:hwyla-253449:${version_hwyla}"
     provided "mcjty.theoneprobe:TheOneProbe-${version_mc_no_patch}:${version_top}:api"

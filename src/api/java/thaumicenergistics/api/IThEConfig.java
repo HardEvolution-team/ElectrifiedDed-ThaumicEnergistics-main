@@ -7,6 +7,8 @@ import appeng.api.config.TerminalStyle;
 
 import thaumicenergistics.api.config.PrefixSetting;
 
+import static net.minecraft.util.EnumFacing.VALUES;
+
 /**
  * @author BrockWS
  * @author Alex811
@@ -47,4 +49,8 @@ public interface IThEConfig {
     double arcaneAssemblerParticleMultiplier();
     double superarcaneAssemblerParticleMultiplier();
 
+
 }
+
+
+

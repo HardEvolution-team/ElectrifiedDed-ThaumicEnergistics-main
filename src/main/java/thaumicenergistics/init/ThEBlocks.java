@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Objects;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.tileentity.TileEntity;
@@ -22,6 +24,7 @@ import thaumicenergistics.block.BlockArcaneAssembler;
 import thaumicenergistics.block.BlockBase;
 import thaumicenergistics.block.BlockInfusionProvider;
 import thaumicenergistics.block.BlockSuperArcaneAssembler;
+import thaumicenergistics.block.generators.BlockICAerGenerator;
 import thaumicenergistics.client.render.IThEModel;
 import thaumicenergistics.definitions.ThEBlockDefinition;
 import thaumicenergistics.definitions.ThETileDefinition;
@@ -29,6 +32,7 @@ import thaumicenergistics.tile.TileArcaneAssembler;
 import thaumicenergistics.tile.TileInfusionProvider;
 import thaumicenergistics.tile.TileSuperArcaneAssembler;
 
+import static ic2.core.init.BlocksItems.registerBlock;
 import static thaumicenergistics.ThaumicEnergistics.LOGGER;
 
 /**
@@ -42,6 +46,7 @@ public class ThEBlocks implements IThEBlocks {
     private ITileDefinition infusionProvider;
     private ITileDefinition arcaneAssembler;
     private ITileDefinition superarcaneAssembler;
+    public static Block aer_generator;
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
@@ -81,6 +86,10 @@ public class ThEBlocks implements IThEBlocks {
         this.infusionProvider = ThEBlocks.createTile(new BlockInfusionProvider("infusion_provider"), TileInfusionProvider.class);
         this.arcaneAssembler = ThEBlocks.createTile(new BlockArcaneAssembler("arcane_assembler"), TileArcaneAssembler.class);
         this.superarcaneAssembler = ThEBlocks.createTile(new BlockSuperArcaneAssembler("super_arcane_assembler"), TileSuperArcaneAssembler.class);
+
+    }
+    public static void init(){
+        aer_generator= new BlockICAerGenerator(Material.IRON).setTranslationKey("aer_generator").setCreativeTab(CreativeTabs.FOOD);
     }
 
     @Override
@@ -97,4 +106,11 @@ public class ThEBlocks implements IThEBlocks {
     public ITileDefinition superarcaneAssembler() {
         return this.superarcaneAssembler;
     }
+
+    @Override
+    public Block aer_generator() {
+        return aer_generator;
+    }
+
+
 }

@@ -120,13 +120,13 @@ public class TileArcaneAssembler extends TileNetwork implements IThESubscribable
     @ParametersAreNonnullByDefault
     public void readFromNBT(NBTTagCompound tag) {
         super.readFromNBT(tag);
-        if (tag.hasKey("cores")){
+        if (tag.hasKey("cores")) {
             this.coreInv.deserializeNBT(tag.getTagList("cores", 10));
         }
-        if (tag.hasKey("upgrades")){
-            this.upgradeInv.deserializeNBT(tag.getTagList("upgrades", 5));
+        if (tag.hasKey("upgrades")) {
+            this.upgradeInv.deserializeNBT(tag.getTagList("upgrades", 10));
         }
-        if (tag.hasKey("crafting")){
+        if (tag.hasKey("crafting")) {
             this.craftingInv.deserializeNBT(tag.getTagList("crafting", 10));
         }
     }
@@ -357,16 +357,16 @@ public class TileArcaneAssembler extends TileNetwork implements IThESubscribable
         return ThEApi.instance().items().upgradeArcane().maybeStack(1).map(visRangeUpgrade -> {
             float vis = AuraHelper.getVis(this.getWorld(), this.getPos());
             if(this.upgradeInv.getUpgrades(visRangeUpgrade) > 0){
-                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(-16, 0, -16));
-                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(-16, 0, 0));
-                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(-16, 0, 16));
+                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(-256, 0, -256));
+                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(-256, 0, 0));
+                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(-256, 0, 256));
 
-                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(0, 0, -16));
-                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(0, 0, 16));
+                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(0, 0, -256));
+                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(0, 0, 256));
 
-                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(16, 0, -16));
-                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(16, 0, 0));
-                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(16, 0, 16));
+                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(256, 0, -256));
+                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(256, 0, 0));
+                vis += AuraHelper.getVis(this.getWorld(), this.getPos().add(256, 0, 256));
             }
             return vis;
         }).orElse(AuraHelper.getVis(this.getWorld(), this.getPos()));

@@ -73,6 +73,7 @@ public class ThEItems implements IThEItems {
     private final IItemDefinition itemArcaneInscriber;
     private final IItemDefinition itemDiffusionCore;
     private final IItemDefinition itemCoalescenceCore;
+    private final IItemDefinition itemPrimalIngot;
     private final IItemDefinition itemEssentiaComponent1k;
     private final IItemDefinition itemEssentiaComponent4k;
     private final IItemDefinition itemEssentiaComponent16k;
@@ -134,6 +135,7 @@ public class ThEItems implements IThEItems {
         this.itemArcaneInscriber = ThEItems.createItem(new ItemArcaneInscriber("arcane_inscriber"));
         this.itemDiffusionCore = ThEItems.createItem(new ItemMaterial("diffusion_core"));
         this.itemCoalescenceCore = ThEItems.createItem(new ItemMaterial("coalescence_core"));
+        this.itemPrimalIngot = ThEItems.createItem(new ItemMaterial("primal_ingot"));
         this.itemEssentiaComponent1k = ThEItems.createItem(new ItemMaterial("essentia_component_1k"));
         this.itemEssentiaComponent4k = ThEItems.createItem(new ItemMaterial("essentia_component_4k"));
         this.itemEssentiaComponent16k = ThEItems.createItem(new ItemMaterial("essentia_component_16k"));
@@ -270,17 +272,15 @@ public class ThEItems implements IThEItems {
     public IItemDefinition coalescenceCore() {
         return this.itemCoalescenceCore;
     }
+    @Override
+    public IItemDefinition primalIngot() {
+        return this.itemPrimalIngot;
+    }
 
     @Override
     public IItemDefinition AdvEssentiaCellCasing() {
         return null;
     }
-
-    @Override
-    public IItemDefinition primalIngot() {
-        return null;
-    }
-
     @Override
     public IItemDefinition essentiaComponent1k() {
         return this.itemEssentiaComponent1k;

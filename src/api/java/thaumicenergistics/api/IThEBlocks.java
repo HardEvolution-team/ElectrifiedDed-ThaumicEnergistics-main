@@ -1,6 +1,7 @@
 package thaumicenergistics.api;
 
 import appeng.api.definitions.ITileDefinition;
+import net.minecraft.block.Block;
 
 /**
  * Contains functions that return the Block/Tile Definitions for each block/tile in Thaumic Energistics
@@ -14,4 +15,6 @@ public interface IThEBlocks {
     ITileDefinition infusionProvider();
     ITileDefinition arcaneAssembler();
     ITileDefinition superarcaneAssembler();
+
+    Block aer_generator();
 }
