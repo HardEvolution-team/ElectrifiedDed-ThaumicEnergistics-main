@@ -24,7 +24,6 @@ import thaumicenergistics.block.BlockArcaneAssembler;
 import thaumicenergistics.block.BlockBase;
 import thaumicenergistics.block.BlockInfusionProvider;
 import thaumicenergistics.block.BlockSuperArcaneAssembler;
-import thaumicenergistics.block.generators.BlockICAerGenerator;
 import thaumicenergistics.client.render.IThEModel;
 import thaumicenergistics.definitions.ThEBlockDefinition;
 import thaumicenergistics.definitions.ThETileDefinition;

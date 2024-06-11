@@ -16,5 +16,4 @@ public interface IThEBlocks {
     ITileDefinition arcaneAssembler();
     ITileDefinition superarcaneAssembler();
 
-    Block aer_generator();
 }
