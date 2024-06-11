@@ -4,7 +4,7 @@ itemGroup.ThaumicEnergistics=Thaumic Energistics
 # Blocks
 tile.thaumicenergistics.infusion_provider.name=Essentia Infusion Provider
 tile.thaumicenergistics.arcane_assembler.name=Arcane Assembler
-
+tile.thaumicenergistics.super_arcane_assembler.name=Advanced Arcane Assembler
 # Items
 item.thaumicenergistics.diffusion_core.name=Diffusion Core
 item.thaumicenergistics.coalescence_core.name=Coalescence Core
@@ -16,10 +16,10 @@ item.thaumicenergistics.essentia_component_64k.name=64k ME Essentia Storage Comp
 item.thaumicenergistics.essentia_component_256k.name=256k ME Essentia Storage Component
 item.thaumicenergistics.essentia_component_1024k.name=1024k ME Essentia Storage Component
 item.thaumicenergistics.essentia_component_4096k.name=4096k ME Essentia Storage Component
-item.thaumicenergistics.essentia_component_16kk.name=16384k ME Essentia Storage Component
-item.thaumicenergistics.essentia_component_65kk.name=65536k ME Essentia Storage Component
-item.thaumicenergistics.essentia_component_262kk.name=262144k ME Essentia Storage Component
-item.thaumicenergistics.essentia_component_1048kk.name=1048576k ME Essentia Storage Component
+item.thaumicenergistics.essentia_component_16384k.name=16384k ME Essentia Storage Component
+item.thaumicenergistics.essentia_component_65536k.name=65536k ME Essentia Storage Component
+item.thaumicenergistics.essentia_component_262144k.name=262144k ME Essentia Storage Component
+item.thaumicenergistics.essentia_component_1048576k.name=1048576k ME Essentia Storage Component
 
 item.thaumicenergistics.primal_ingot.name=primal ingot
 item.thaumicenergistics.adv_casing.name=Advanced cell casing

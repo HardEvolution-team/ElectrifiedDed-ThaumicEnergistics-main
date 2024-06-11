@@ -17,10 +17,14 @@ item.thaumicenergistics.essentia_component_64k.name=МЭ 64k компонент 
 item.thaumicenergistics.essentia_component_256k.name=МЭ 256k компонент хранения эссенции
 item.thaumicenergistics.essentia_component_1024k.name=МЭ 1024k компонент хранения эссенции
 item.thaumicenergistics.essentia_component_4096k.name=МЭ 4096k компонент хранения эссенции
-item.thaumicenergistics.essentia_component_16kk.name=МЭ 16384k компонент хранения эссенции
-item.thaumicenergistics.essentia_component_65kk.name=МЭ 65536k компонент хранения эссенции
-item.thaumicenergistics.essentia_component_262kk.name=МЭ 62144k компонент хранения эссенции
-item.thaumicenergistics.essentia_component_1048kk.name=МЭ 1048576k компонент хранения эссенции
+item.thaumicenergistics.essentia_component_16384k.name=МЭ 16384k компонент хранения эссенции
+item.thaumicenergistics.essentia_component_65536k.name=МЭ 65536k компонент хранения эссенции
+item.thaumicenergistics.essentia_component_262144k.name=МЭ 62144k компонент хранения эссенции
+item.thaumicenergistics.essentia_component_1048576k.name=МЭ 1048576k компонент хранения эссенции
+
+
+
+
 
 item.thaumicenergistics.primal_ingot.name=Первобытный слиток
 item.thaumicenergistics.adv_casing.name=Улучшенный корпус ячейки
