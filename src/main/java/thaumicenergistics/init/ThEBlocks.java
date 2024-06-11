@@ -46,7 +46,7 @@ public class ThEBlocks implements IThEBlocks {
     private ITileDefinition infusionProvider;
     private ITileDefinition arcaneAssembler;
     private ITileDefinition superarcaneAssembler;
-    public static Block aer_generator;
+
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
@@ -88,9 +88,7 @@ public class ThEBlocks implements IThEBlocks {
         this.superarcaneAssembler = ThEBlocks.createTile(new BlockSuperArcaneAssembler("super_arcane_assembler"), TileSuperArcaneAssembler.class);
 
     }
-    public static void init(){
-        aer_generator= new BlockICAerGenerator(Material.IRON).setTranslationKey("aer_generator").setCreativeTab(CreativeTabs.FOOD);
-    }
+
 
     @Override
     public ITileDefinition infusionProvider() {
@@ -106,11 +104,5 @@ public class ThEBlocks implements IThEBlocks {
     public ITileDefinition superarcaneAssembler() {
         return this.superarcaneAssembler;
     }
-
-    @Override
-    public Block aer_generator() {
-        return aer_generator;
-    }
-
 
 }
