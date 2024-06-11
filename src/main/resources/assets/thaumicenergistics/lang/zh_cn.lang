@@ -3,7 +3,8 @@ itemGroup.ThaumicEnergistics=神秘能源
 
 # Blocks
 tile.thaumicenergistics.infusion_provider.name=源质供应器
-tile.thaumicenergistics.arcane_assembler.name=奥术装配器
+tile.thaumicenergistics.arcane_assembler.name=奥术装配室
+tile.thaumicenergistics.super_arcane_assembler.name=超级奥数装配室
 
 # Items
 item.thaumicenergistics.diffusion_core.name=扩散核心
@@ -16,12 +17,13 @@ item.thaumicenergistics.essentia_component_64k.name=64k-ME源质储存组件
 item.thaumicenergistics.essentia_component_256k.name=256k-ME源质储存组件
 item.thaumicenergistics.essentia_component_1024k.name=1024k-ME源质储存组件
 item.thaumicenergistics.essentia_component_4096k.name=4096k ME源质储存组件
-item.thaumicenergistics.essentia_component_16kk.name=16384k ME源质储存组件
-item.thaumicenergistics.essentia_component_65kk.name=65536k ME源质储存组件
-item.thaumicenergistics.essentia_component_262kk.name=262144k ME源质储存组件
-item.thaumicenergistics.essentia_component_1048kk.name=1048576k ME源质储存组件
+item.thaumicenergistics.essentia_component_16384k.name=16384k-ME源质储存组件
+item.thaumicenergistics.essentia_component_65536k.name=65536k-ME源质储存组件
+item.thaumicenergistics.essentia_component_262144k.name=262144k-ME源质储存组件
+item.thaumicenergistics.essentia_component_1048576k.name=1048576k-ME源质储存组件
 
-
+item.thaumicenergistics.primal_ingot.name=元始锭
+item.thaumicenergistics.adv_casing.name=高级源质存储外壳
 
 item.thaumicenergistics.essentia_cell_1k.name=1k-ME源质储存元件
 item.thaumicenergistics.essentia_cell_4k.name=4k-ME源质储存元件
@@ -156,15 +158,15 @@ research.arcaneterminal.stage.2=我现在可以制作奥术合成终端
 research.arcaneterminal.addenda.1=我可以升级我的奥术合成终端以增加其 Vis 抽取范围
 
 # Research Arcane Assembler
-research.arcaneassembler.title=奥术装配器
+research.arcaneassembler.title=奥术装配室
 research.arcaneassembler.stage.1=事实证明，将技术和魔术进行融合是一个挑战，但到目前为止，它进展顺利，所以如果我更进一步，可能会出错吗？我目前已经厌倦了必须自己制作一堆东西，当然我可以想出一种方法来使分子汇编器能够制作奥术物体！
 research.arcaneassembler.stage.2=正如我所怀疑的那样，神秘时代的配方不能很好地与物质/能量设备配合使用，爆炸可能已经发生。不过，我相信我会找到一种方法来最终实现它。然而，就目前而言，在研究了一堆物质/能量之后，我想出了一个可以使用魔力水晶碎片的分子组装器的设计。不过，还有另一个问题.……它不知道如何制作我知道如何制作的东西。这就像它缺少了什么。
-research.arcaneassembler.addenda.1=我可以升级我的奥术装配器以增加其 Vis 抽取范围，就像我的奥术合成终端一样
-research.arcaneassembler.addenda.2=注意：当我要求制作某些东西时，我的ME系统不会显示Vis和魔力水晶碎片的成本，即使它们仍然是必需的。如果我在制作东西时遇到问题，我应该看看奥术装配器的界面，因为它可能有答案。最后，我可以用加速卡升级奥术装配器，使其更快。
+research.arcaneassembler.addenda.1=我可以升级我的奥术装配室以增加其 Vis 抽取范围，就像我的奥术合成终端一样
+research.arcaneassembler.addenda.2=注意：当我要求制作某些东西时，我的ME系统不会显示Vis和魔力水晶碎片的成本，即使它们仍然是必需的。如果我在制作东西时遇到问题，我应该看看奥术装配室的界面，因为它可能有答案。最后，我可以用加速卡升级奥术装配室，使其更快。
 
 # Research Knowledge Core
 research.knowledgecore.title=知识核心
-research.knowledgecore.stage.1=我一直在思考我现在的镇纸：奥术装配器。我一直在思考这个问题……好多。低语也无济于事。我想我的头脑需要休息一下，但在我弄清楚点一点之前，我无法入睡！嗯，介意……我无法将我的大脑融合到奥术装配器中，这不是我的目的，我仍然需要它。我不能教奥术汇编器我所知道的，因为它没有大脑。也许我可以解决这个问题。是的！睡眠可以等，我必须寻找奥术装配器的大脑！我有实验要做，有研究要做。
+research.knowledgecore.stage.1=我一直在思考我现在的镇纸：奥术装配室。我一直在思考这个问题……好多。低语也无济于事。我想我的头脑需要休息一下，但在我弄清楚点一点之前，我无法入睡！嗯，介意……我无法将我的大脑融合到奥术装配室中，这不是我的目的，我仍然需要它。我不能教奥术汇编器我所知道的，因为它没有大脑。也许我可以解决这个问题。是的！睡眠可以等，我必须寻找奥术装配室的大脑！我有实验要做，有研究要做。
 research.knowledgecore.stage.2=这是一场胜利！在将一堆大脑和电路砸碎了几个小时后，我发现了如何使这台机器工作。我想出了一种我称之为知识核心的设备。该设备适用于神秘的配方，但我不能将其用于其他任何事情，当我尝试时，其中的大脑会爆炸成碎片，但我会确保这不会发生。我已经清理了我的罐子够多次了。哦，对了大脑！我忘了提，我需要一个新鲜的大脑。嗯，足够新鲜。我敢肯定，不死族的大脑不会介意在未来几年里，在我的命令下为我制作东西。
 
 # Research Arcane Inscriber
