@@ -3,6 +3,7 @@ package thaumicenergistics.client.gui.crafting;
 import java.io.IOException;
 
 import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.GuiTextField;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 
@@ -25,7 +26,7 @@ public class GuiCraftAmountBridge extends GuiCraftAmount {
 
     private EntityPlayer player;
     private PartSharedTerminal part;
-    private GuiNumberBox craftAmount;
+    private GuiTextField craftAmount;
 
     public GuiCraftAmountBridge(EntityPlayer player, PartSharedTerminal part) {
         super(player.inventory, part);
